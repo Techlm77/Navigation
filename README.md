@@ -11,8 +11,8 @@ The find.sh script is an advanced version of the file and folder search tool. It
 
 Notable features of find.sh include:
 
-    Interactive selection: If multiple matches are found, find.sh displays a numbered list of results, allowing you to choose the desired location by entering the corresponding number.
-    Automatic directory change: Once you select a location, the script automatically changes the current directory to that location, making it convenient to navigate to the desired file or folder.
+Interactive selection: If multiple matches are found, find.sh displays a numbered list of results, allowing you to choose the desired location by entering the corresponding number.
+Automatic directory change: Once you select a location, the script automatically changes the current directory to that location, making it convenient to navigate to the desired file or folder.
 
 This enhanced version of the script provides an efficient and streamlined way to locate and access files or folders within your Linux filesystem.
 
@@ -22,9 +22,9 @@ The simple version of the command allows you to quickly search for a specific fo
 
 Here's how it works:
 
-    You will be prompted to enter the name of the folder or file you are looking for.
-    The command will search the entire filesystem (excluding the /run directory) for matching results.
-    If a match is found, the current directory will be changed to the location of the matched result, allowing you to easily access and work with the desired folder or file.
+You will be prompted to enter the name of the folder or file you are looking for.
+The command will search the entire filesystem (excluding the /run directory) for matching results.
+If a match is found, the current directory will be changed to the location of the matched result, allowing you to easily access and work with the desired folder or file.
 
 This simple and straightforward command provides a convenient way to search for and navigate to specific locations within your Linux filesystem without the need for complex search commands or manual directory navigation.
 

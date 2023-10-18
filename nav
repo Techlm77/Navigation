@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Version of the nav script
-NAV_VERSION="1.0.3"
+NAV_VERSION="1.0.4"
 
 # Function to compare version numbers
 compare_versions() {
@@ -97,6 +97,7 @@ if [ "$1" == "--uninstall" ]; then
     uninstall_nav
 elif [ "$1" == "--update" ]; then
     update_nav
+    exit 0  # Exit after performing the update, no need for further input
 else
     # Prompt the user for the search term
     read -p "Enter the file or folder name: " search_term

@@ -8,7 +8,7 @@ nav() {
     read -p "Enter the file or folder name: " search_term
     IFS=$'\n' result=($(find / -name "$search_term" 2>/dev/null))
 
-    if [ ${#result[@]} -eq 0 ]; then
+    if [ $(( ${#result[@]} )) -eq 0 ]; then
         echo "File or folder not found."
         return
     fi

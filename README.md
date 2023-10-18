@@ -1,35 +1,47 @@
-# Finder
-This script provides a convenient way for users to quickly locate and navigate to specific folders or files on their linux filesystem.
+# Bash/Zsh Navigation Helper
 
-# Shell Script: Find and Navigate to Files or Folders
+A simple script to add a custom `nav` function to your `.bashrc` or `.zshrc` file, allowing you to search for and navigate to files or folders on your system.
 
-This shell script provides a simple and efficient way to search for specific files or folders within your Linux filesystem and navigate to the desired location. It allows you to input a search term, such as a file name or folder name, and displays a list of matching results. You can then select the desired location by entering the corresponding number, and the script will automatically change the current directory to that location. This helps streamline the process of finding and accessing files or folders, saving you time and effort in navigating through your filesystem.
+## Table of Contents
+- [Introduction](#introduction)
+- [Usage](#usage)
+- [Installation](#installation)
+- [License](#license)
 
-# Advanced Version: find.sh Script
+## Introduction
 
-The find.sh script is an advanced version of the file and folder search tool. It provides additional features and a more user-friendly interface. With find.sh, you can enter the name of the folder or file you are looking for, and the script will search your Linux filesystem for matching results.
+Have you ever found yourself looking for a file or folder on your system, but couldn't quite remember where it's located? The `nav` function simplifies this process by searching for the specified file or folder and offering a list of locations. You can easily navigate to your desired location with a single command.
 
-Notable features of find.sh include:
+## Usage
 
-Interactive selection: If multiple matches are found, find.sh displays a numbered list of results, allowing you to choose the desired location by entering the corresponding number.
-Automatic directory change: Once you select a location, the script automatically changes the current directory to that location, making it convenient to navigate to the desired file or folder.
+1. Make sure you have either Bash or Zsh as your default shell.
 
-This enhanced version of the script provides an efficient and streamlined way to locate and access files or folders within your Linux filesystem.
+2. Clone this repository to your local machine or download the `install.sh` script.
 
-# Simple Version: Search and Change Directory
+3. Make the script executable:
+   ```bash
+   chmod +x install.sh
 
-The simple version of the command allows you to quickly search for a specific folder or file in your Linux filesystem and change the current directory to the location of the matched result.
-
-Here's how it works:
-
-You will be prompted to enter the name of the folder or file you are looking for.
-The command will search the entire filesystem (excluding the /run directory) for matching results.
-If a match is found, the current directory will be changed to the location of the matched result, allowing you to easily access and work with the desired folder or file.
-
-This simple and straightforward command provides a convenient way to search for and navigate to specific locations within your Linux filesystem without the need for complex search commands or manual directory navigation.
-
+# Run the script:
 ```sh
-read -p "Enter the folder or file name you are looking for: " search_name && cd "$(sudo find / -path "/run" -prune -o -type d -name "$search_name" -print -quit)"
+./install.sh
 ```
 
-Be warned the simple version is not perfect and doesn't always work which is why I wrote a complex script (find.sh) for better reliability.
+If your ~/.bashrc or ~/.zshrc files exist, the script will add the nav function to the appropriate file.
+
+Restart your shell or run source ~/.bashrc or source ~/.zshrc to apply the changes.
+
+You can now use the nav function in your shell to search for and navigate to files or folders.
+
+# Example:
+```sh
+nav
+```
+
+Follow the prompts to enter the name of the file or folder you're looking for, and choose the location you want to navigate to.
+Installation
+
+No additional installation is required. Simply follow the Usage instructions to add the nav function to your shell configuration.
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -39,9 +39,10 @@ nav
 ```
 
 Follow the prompts to enter the name of the file or folder you're looking for, and choose the location you want to navigate to.
-Installation
+
+# Installation
 
 No additional installation is required. Simply follow the Usage instructions to add the nav function to your shell configuration.
-License
 
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
